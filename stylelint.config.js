@@ -1,31 +1,20 @@
 export default {
-	extends: [
-		'stylelint-config-standard',
-		'stylelint-order-htmlacademy',
-		'@stylistic/stylelint-config',
-	],
+	extends: ['stylelint-config-standard', 'stylelint-order-htmlacademy'],
 	overrides: [
 		{
 			customSyntax: 'postcss-scss',
-			files: ['**/*.scss'],
+			files: ['**/*.scss']
 		},
 		{
 			customSyntax: 'postcss-html',
-			files: ['**/*.vue'],
+			files: ['**/*.svelte', '**/*.vue'],
 			rules: {
-				'function-no-unknown': [
-					true,
-					{ ignoreFunctions: ['v-bind'] },
-				],
-			},
-		},
+				'function-no-unknown': [true, { ignoreFunctions: ['v-bind'] }]
+			}
+		}
 	],
 	rules: {
-		'@stylistic/color-hex-case': 'lower',
-		'@stylistic/indentation': 'tab',
-		'@stylistic/number-leading-zero': 'always',
-		'@stylistic/number-no-trailing-zeros': true,
-		'@stylistic/string-quotes': 'single',
+		'at-rule-empty-line-before': null,
 		'alpha-value-notation': 'number',
 		'at-rule-no-unknown': [
 			true,
@@ -39,32 +28,34 @@ export default {
 					'include',
 					'mixin',
 					'page',
-					'use',
-				],
-			},
+					'use'
+				]
+			}
 		],
 		'color-function-notation': 'legacy',
 		'color-hex-length': 'long',
 		'font-family-name-quotes': 'always-unless-keyword',
 		'media-feature-range-notation': 'prefix',
 		'selector-class-pattern': [
-			/* eslint-disable-next-line @stylistic/max-len */
 			'^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)*(?:[.+])?$',
 			{
 				message: function expected(selectorValue) {
-					/* eslint-disable-next-line @stylistic/max-len */
 					return `Expected class selector "${selectorValue}" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms`;
 				},
-				resolveNestedSelectors: true,
-			},
+				resolveNestedSelectors: true
+			}
 		],
 		'selector-pseudo-class-no-unknown': [
 			true,
-			{ ignorePseudoClasses: ['deep'] },
+			{
+				ignorePseudoClasses: ['global', 'deep']
+			}
 		],
 		'value-keyword-case': [
 			'lower',
-			{ camelCaseSvgKeywords: true },
-		],
-	},
+			{
+				camelCaseSvgKeywords: true
+			}
+		]
+	}
 };

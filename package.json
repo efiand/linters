@@ -1,35 +1,20 @@
 {
-  "name": "efiand-linters",
-  "version": "0.0.4",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/efiand/linters.git"
-  },
-  "author": "efiand",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/efiand/linters/issues"
-  },
-  "type": "module",
-  "dependencies": {
-    "@nuxt/eslint-plugin": "0.5.0",
-    "@stylistic/eslint-plugin": "2.6.4",
-    "@stylistic/stylelint-config": "2.0.0",
-    "@typescript-eslint/eslint-plugin": "8.1.0",
-    "@typescript-eslint/parser": "8.1.0",
-    "eslint": "9.9.0",
-    "eslint-plugin-import-x": "3.1.0",
-    "eslint-plugin-perfectionist": "3.2.0",
-    "eslint-plugin-vue": "9.27.0",
-    "globals": "15.9.0",
-    "postcss-html": "1.7.0",
-    "postcss-scss": "4.0.9",
-    "stylelint": "16.8.1",
-    "stylelint-config-standard": "36.0.1",
-    "stylelint-order-htmlacademy": "2.1.1",
-    "vue-eslint-parser": "9.4.3"
-  },
-	"scripts": {
-		"lint": "eslint --fix"
+	"name": "efiand-linters",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/efiand/linters.git"
+	},
+	"author": "efiand",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/efiand/linters/issues"
+	},
+	"type": "module",
+	"dependencies": {
+		"postcss-html": "1.7.0",
+		"postcss-scss": "4.0.9",
+		"stylelint-config-standard": "36.0.1",
+		"stylelint-order-htmlacademy": "3.0.2"
 	}
 }
