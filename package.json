@@ -1,12 +1,22 @@
 {
 	"name": "efiand-linters",
-	"version": "0.1.0",
+	"version": "0.2.2",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/efiand/linters.git"
 	},
 	"author": "efiand",
 	"license": "ISC",
+  "exports": {
+    "./stylelint": {
+      "import": "./stylelint.config.js"
+    }
+  },
+	"typesVersions": {
+		"*": {
+			"stylelint": ["stylelint.config.d.ts"]
+		}
+	},
 	"bugs": {
 		"url": "https://github.com/efiand/linters/issues"
 	},
@@ -14,6 +24,7 @@
 	"dependencies": {
 		"postcss-html": "1.7.0",
 		"postcss-scss": "4.0.9",
+		"stylelint": "16.10.0",
 		"stylelint-config-standard": "36.0.1",
 		"stylelint-order-htmlacademy": "3.0.2"
 	}

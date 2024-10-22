@@ -35,6 +35,7 @@ export default {
 		'color-function-notation': 'legacy',
 		'color-hex-length': 'long',
 		'font-family-name-quotes': 'always-unless-keyword',
+		'import-notation': 'string',
 		'media-feature-range-notation': 'prefix',
 		'selector-class-pattern': [
 			'^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)*(?:[.+])?$',
