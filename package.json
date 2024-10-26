@@ -1,31 +1,48 @@
 {
 	"name": "efiand-linters",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/efiand/linters.git"
 	},
 	"author": "efiand",
 	"license": "ISC",
-  "exports": {
-    "./stylelint": {
-      "import": "./stylelint.config.js"
-    }
-  },
+	"exports": {
+		"./stylelint": {
+			"import": "./stylelint.config.js"
+		},
+		"./eslint": {
+			"import": "./eslint.config.js"
+		},
+		"./prettier": {
+			"import": "./prettier.config.js"
+		}
+	},
 	"typesVersions": {
 		"*": {
-			"stylelint": ["stylelint.config.d.ts"]
+			"stylelint": [
+				"stylelint.config.d.ts"
+			]
 		}
 	},
 	"bugs": {
 		"url": "https://github.com/efiand/linters/issues"
 	},
 	"type": "module",
+	"devDependencies": {
+		"eslint": "9.13.0",
+		"pre-commit": "1.2.2",
+		"prettier": "3.3.3",
+		"stylelint": "16.10.0"
+	},
 	"dependencies": {
-		"postcss-html": "1.7.0",
-		"postcss-scss": "4.0.9",
-		"stylelint": "16.10.0",
-		"stylelint-config-standard": "36.0.1",
-		"stylelint-order-htmlacademy": "3.0.2"
+		"efiand-shared": "0.0.3"
+	},
+	"pre-commit": [
+		"lint-format"
+	],
+	"scripts": {
+		"lint-format": "prettier --write . && eslint . --fix",
+		"lint": "prettier --check . && eslint ."
 	}
 }
