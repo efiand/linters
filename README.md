@@ -31,7 +31,7 @@ export default stylelintConfig;
 ```
 
 ```js
-// .prettier.config.js
+// prettier.config.js
 
 import { prettierConfig } from 'efiand-linters/prettier';
 
