@@ -1,3 +1,3 @@
-import { prettierConfig } from 'efiand-shared/config/prettier.js';
+import { prettierConfig } from "efiand-shared/config/prettier.js";
 
 export default prettierConfig;

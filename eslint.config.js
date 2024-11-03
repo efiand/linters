@@ -1,3 +1,3 @@
-import { eslintConfigs } from 'efiand-shared/config/eslint.js';
+import { eslintConfigs } from "efiand-shared/config/eslint.js";
 
 export default eslintConfigs;

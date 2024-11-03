@@ -1,39 +1,33 @@
 # linters [![npm version](https://img.shields.io/npm/v/efiand-linters.svg)](https://www.npmjs.com/package/efiand-linters)
 
-Конфигурации линтеров в проектах @efiand.
+Конфигурации линтеров и форматтеров в проектах с кодгайдом @efiand.
+
+## eslint
 
 ```js
 // eslint.config.js
 
-import {
-	createEslintConfig,
-	eslintConfigs,
-	eslintSharedCustomRules,
-} from 'efiand-linters/stylelint';
+import { eslintConfigs } from "efiand-linters/eslint";
 
-let config = eslintConfigs;
-
-// OR
-config = createEslintConfig([oneConfig, anotherConfig]);
-
-// OR
-config = [...otherConfigs, { rules: eslintSharedCustomRules }];
-
-export default config;
+export default eslintConfigs;
 ```
+
+## stylelint
 
 ```js
 // stylelint.config.js
 
-import { stylelintConfig } from 'efiand-linters/stylelint';
+import { stylelintConfig } from "efiand-linters/stylelint";
 
 export default stylelintConfig;
 ```
 
+## prettier
+
 ```js
 // prettier.config.js
 
-import { prettierConfig } from 'efiand-linters/prettier';
+import { prettierConfig } from "efiand-linters/prettier";
 
 export default prettierConfig;
 ```
