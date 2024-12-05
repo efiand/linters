@@ -1,6 +1,6 @@
 {
 	"name": "efiand-linters",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/efiand/linters.git"
@@ -37,11 +37,11 @@
 		"lint": "prettier --check . && eslint ."
 	},
 	"dependencies": {
-		"efiand-shared": "0.2.1"
+		"efiand-shared": "0.2.2"
 	},
 	"devDependencies": {
+		"@fastify/pre-commit": "2.2.0",
 		"eslint": "9.14.0",
-		"pre-commit": "1.2.2",
 		"prettier": "3.3.3",
 		"stylelint": "16.10.0"
 	}
